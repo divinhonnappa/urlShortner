@@ -1,8 +1,6 @@
 import requests
 import sys
 
-# CLI functions
-#TO:DO switch case for cli functions
 def handleCliFns(func):
     if func == "list":
         resp = requests.get("http://localhost:5000/urls").json()
@@ -29,4 +27,5 @@ def handleCliFns(func):
             print(resp.status_code)
         else:
             print("Error: No url provided to delete")
+
 handleCliFns(sys.argv[1])
