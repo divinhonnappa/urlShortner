@@ -11,7 +11,7 @@ def shortenUrl(url):
 
 # home route that returns below text when root url is accessed
 @app.route("/")
-def hello_world():
+def main_page():
 	return "<p>URL SHORTNER</p>"
 
 @app.route("/urls", methods=["GET", "POST"])
